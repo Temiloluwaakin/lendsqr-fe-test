@@ -6,6 +6,7 @@ header {
     box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
     transition: 0.5s;
     z-index: 100;
+    box-sizing: border-box;
 
     .header-cont{
         height: 100%;
