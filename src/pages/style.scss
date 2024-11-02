@@ -1,0 +1,197 @@
+.users-page{
+
+
+    h2{
+        font-family: Work Sans;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.15px;
+        text-align: left;
+        color: rgba(33, 63, 125, 1);
+    }
+
+    .userStats{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
+
+/*////////////////////////// /////////////////////     Login     //////////////////////// //////////////*/
+.login{
+    display: flex;
+    width: 100%;
+
+
+    .login-left-side{
+        flex: 50%;
+        padding: 92px 0 0 60px;
+        display: block;
+        background: rgba(255, 255, 255, 1);
+
+
+        .login-logo{
+            display: flex;
+            align-items: start;
+            margin-bottom: 90px;
+            padding-left: 30px;
+
+            .union-logo{
+                width: 24.75px;
+                height: 25px;
+                margin-top: 2px;
+                margin-right: 10px;
+            }
+        }
+
+        .login-img{
+            margin-top: 5px;
+            width: 100%;
+        }
+    }
+
+    .login-right-side{
+        height: 100vh;
+        flex: 50%;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 15px 90px 0px rgba(0, 0, 0, 0.03);
+        padding: 150px 0 0 80px;
+
+        h1{
+            font-family: Avenir Next;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 54.64px;
+            letter-spacing: -0.04em;
+            text-align: left;
+            color: rgba(33, 63, 125, 1);
+        }
+
+        p{
+            font-family: Avenir Next;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 27.32px;
+            text-align: left;
+            color: rgba(84, 95, 125, 1);
+        }
+
+        form{
+            width: 80%; 
+            margin-top: 50px;
+
+            p{
+                font-family: Avenir Next;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 16.39px;
+                letter-spacing: 0.1em;
+                color: rgba(57, 205, 204, 1);
+                padding: 10px 0;
+
+            }
+
+            button{
+                width: 90%;
+                background: rgba(57, 205, 204, 1);
+                height: 48px;
+                border-radius: 8px;
+                border: none;
+                font-family: Avenir Next;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19.12px;
+                letter-spacing: 0.1em;
+                text-align: center;
+                color: rgba(255, 255, 255, 1);
+            }
+
+            button:hover{
+                cursor: pointer;
+                background: rgb(38, 141, 141);
+            }
+
+            .form-page{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input {
+                    width: 90%;
+                    height: 50px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    border: 2px solid rgba(84, 95, 125, 0.15);
+                    
+                }
+
+                input::placeholder{
+                    padding-left: 20px;
+                    color: rgba(84, 95, 125, 0.15);
+                    font-family: Avenir Next;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 19.12px;
+                    color: rgba(84, 95, 125, 1);
+                    opacity: 0.6;
+                }
+
+                .password-input{
+                    position: relative;
+
+                    .show-password {
+                        position: absolute;
+                        top: 12px;
+                        right: 60px;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        color: rgba(57, 205, 204, 1);
+                        font-family: Avenir Next;
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 16.39px;
+                        letter-spacing: 0.1em;
+                        
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+/*////////////////////////// /////////////////////    RESPONSIVE    //////////////////////// //////////////*/
+@media screen and (max-width:900px) {
+    .login{
+        .login-left-side{
+            position: relative;
+            padding-left: 50px;
+            .login-img{
+                opacity: 0.6;
+            }
+        }
+        .login-right-side{
+            position: absolute;
+            top: 0;
+            background: transparent;
+            width: 100%;
+
+            form{
+                .form-page{
+                    .password-input{
+                        .show-password{
+                            right: 30px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
