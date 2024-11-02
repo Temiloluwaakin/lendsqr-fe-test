@@ -77,7 +77,7 @@ const Login = () => {
                             )}
                         </div>
 
-                        <p> <Link to='/' style={{color:'inherit'}}> FORGOTTEN PASSWORD </Link></p>
+                        <p> <Link to='/' style={{color:'inherit',textDecoration:'none'}}> FORGOTTEN PASSWORD </Link></p>
 
                         <span>
                             <button type="submit">
