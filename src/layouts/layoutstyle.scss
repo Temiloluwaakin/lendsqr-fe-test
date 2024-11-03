@@ -103,7 +103,7 @@ main {
   flex-direction: column;
 
   .header {
-    padding: 1rem;
+    padding: 0rem 60px 0 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,6 +122,7 @@ main {
 
       @media (max-width: 768px) {
         display: block;
+        padding-left: 2rem;
       }
     }
 
@@ -168,6 +169,7 @@ main {
       align-items: center;
       width: 40%;
 
+
       @media (max-width: 768px) {
         display: none;
       }
@@ -187,7 +189,7 @@ main {
 
       .search-icon{
           width: 56px;
-          height: 44px;
+          height: 40px;
           opacity: 0px;
           display: flex;
           align-items: center;
@@ -218,15 +220,92 @@ main {
     flex: 1;
 
     .sidebar {
-      width: 250px;
-      background-color: #444;
-      color: white;
-      padding: 1rem;
+      width: 283px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
+      color: #000;
+      padding: 139px 0 0 0;
       transition: transform 0.3s ease;
       transform: translateX(0);
 
-      &.hidden {
-        transform: translateX(-100%);
+      .org-switch{
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+        gap: 10px;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.77px;
+        text-align: left;
+        color: rgba(33, 63, 125, 1);
+      }
+      
+      nav{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        font-family: Work Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18.77px;
+        text-align: left;
+
+        .first-Side-Nav{
+          padding: 40px 0 30px 2rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: fade-out($color: rgba(33,63, 125, 1), $amount: 0.5);
+          font-family: Work Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18.77px;
+        }
+
+        .sidebar-category{
+          display: flex;
+          flex-direction: column;
+
+          h4{
+            font-family: Work Sans;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.08px;
+            text-align: left;
+            color: rgba(84, 95, 125, 1);
+            padding-left: 2rem;
+            margin-bottom: 7px;
+          }
+
+          a{
+            text-decoration: none;
+            color: fade-out($color: rgba(33,63, 125, 1), $amount: 0.5);
+            padding: 10px 0 10px 2rem;
+          }
+
+          .active {
+            color: rgba(33, 63, 125, 1);
+            background-color: fade-out($color: rgba(57, 205, 204, 1), $amount: 0.9);
+          }
+        }
+      }
+
+          
+
+
+      @media (max-width: 768px) {
+        transform: translateX(-100%); // Move off-screen by default
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      &.open {
+        transform: translateX(0);
       }
 
       
@@ -242,9 +321,9 @@ main {
 
     .content {
       flex: 1;
-      padding: 1rem;
+      padding: 1rem 60px 1rem 60px;
       padding-top: 150px;
-      background-color: #f4f4f4;
+      background: rgba(251, 251, 251, 1);
     }
   }
 }

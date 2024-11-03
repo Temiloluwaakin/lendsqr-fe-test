@@ -88,16 +88,17 @@ const Header: React.FC<HeaderProps>  = ({onHamburgerClick}) => {
                 <p>Ayodeji</p>
                 <img src={dropdown} alt='dropdown-caret' className='dropdown-caret'/>
             </div>
-            
+
             <div className="dropdown-container">
+                <img src={avatar} alt="avatar" className='avatar' />
                 <button onClick={toggleDropdown} className="dropdown-toggle">
-                Menu ▼
+                    <img src={dropdown} alt='dropdown-caret' className='dropdown-caret' width={50} height={50}/>
                 </button>
                 {dropdownOpen && (
                 <div className="dropdown">
-                    <a href="#">Profile</a>
-                    <a href="#">Settings</a>
-                    <a href="#">Logout</a>
+                    <span>Profile</span>
+                    <span>Settings</span>
+                    <span>Logout</span>
                 </div>
                 )}
             </div>
