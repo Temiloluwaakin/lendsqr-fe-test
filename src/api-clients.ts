@@ -20,6 +20,24 @@ export const fetchUsers = async (page: number, limit: number| '')/*: Promise<Use
         };
     } catch (error) {
         console.error(error);
-        throw error;  // This ensures that the function rejects with an error in case of failure
+        throw error; 
+    }
+};
+
+
+export const fetchUserDetails = async (id: string) => {
+    try{
+
+        const response = await axios.get(
+            `https://672551e5c39fedae05b47d71.mockapi.io/api/users/${id}`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        );
+
+        return response.data;
+    } catch (error) {console.error(error);
+        throw error;
     }
 };

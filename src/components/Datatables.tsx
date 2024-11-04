@@ -29,7 +29,6 @@ const DataTable: React.FC= () => {
         {
             onSuccess: (fetchedData) => {
                 setDataReceived(fetchedData.data);
-                console.log(fetchedData.total);
             },
         }
     );
@@ -111,7 +110,7 @@ const DataTable: React.FC= () => {
                                     </button>
                                     {activeAction === user.id && (
                                         <div className='action-modal'>
-                                            <ActionModal />
+                                            <ActionModal id={user.id}/>
                                         </div>
                                     )}
                                 </td>
