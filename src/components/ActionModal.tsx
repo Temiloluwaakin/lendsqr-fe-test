@@ -15,7 +15,7 @@ const ActionModal: React.FC<ActionProps> = ({id}) => {
     return (
         <div className="action-modal-overlay">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <Link to={`/users/${id}`} className='action-modal-items view-details'>
+                <Link to={`/users/${id}`} className='action-modal-items view-details' style={{textDecoration:'none'}}>
                     <img src={viewDetail} alt='view-user-icon' />
                     View Details
                 </Link>

@@ -1,96 +1,3 @@
-/*:root {
-  --header-height: 90px;
-  --nav-width: 60px;
-
-  --first-color: #188F47;
-  --first-color-alt: #f582a7;
-  --white-color: #fff;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  
-}
-
-main {
-  position: relative;
-  margin: var(--header-height) 0 0 0;
-  padding: 0 0 0 1rem;
-  font-size: 1rem;
-  font-family: 'Nunito Sans', sans-serif;
-  transition: 0.5s;
-}
-
-
-
-.content{
-  background: rgba(251, 251, 251, 1);
-  padding: 60px 40px 200px 77px ;
-}
-
-.show {
-  left: 0;
-}
-
-.space-toggle {
-  padding-left: calc(var(--nav-width) + 1rem);
-}
-*/
-
-
-
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                 !!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   RESPOMSIVE          !!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                 !!!!!!!!!!!!!!!!!!!!!!!!! */
-
-/*@media screen and (min-width: 768px) {
-  main {
-    margin: calc(var(--header-height)) 0 0 0;
-    padding: 0 1rem 0 calc(var(--nav-width) + 2rem);
-  }
-
-  .header {
-    height: calc(var(--header-height) + 1rem);
-    padding-left: calc(var(--nav-width) + 2rem);
-  }
-
-  .sidebar {
-    left: 0;
-    padding: 1rem 0 0 0;
-  }
-
-  .show {
-    width: calc(var(--header-height) + 156px);
-  }
-
-  .space-toggle {
-    padding-left: calc(var(--nav-width) + 180px);
-  }
-}
-
-main {
-  position: relative;
-  transition: 0.5s;
-  width: 100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -292,10 +199,8 @@ main {
         }
       }
 
-          
 
-
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         transform: translateX(-100%); // Move off-screen by default
         position: fixed;
         height: 100%;
@@ -309,14 +214,6 @@ main {
       }
 
       
-
-      @media (max-width: 768px) {
-        position: fixed;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10;
-      }
     }
 
     .content {
@@ -324,6 +221,56 @@ main {
       padding: 1rem 60px 1rem 60px;
       padding-top: 150px;
       background: rgba(251, 251, 251, 1);
+    }
+  
+  }
+}
+
+/*//////////////////////////////////////////////////Responsive///////////////////////////////////////*/
+
+@media screen and (max-width:900px) {
+  .container{
+    .header{
+      padding-left: 0;
+      padding-right: 0;
+      .hamburger{
+        padding-left: 10px;
+      }
+
+      .right-side-header {
+        img{
+          width: 1x;
+        }
+      }
+    }
+    .main{
+      .content{
+        width: 100vh;
+        padding-left: 10px;
+
+        .users-page{
+          max-width: 380px;
+          .userStats{
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 20px;
+
+            .infoCard{
+              width: 150px;
+            }
+          }
+          .datatable{
+            width: 100%;
+            .datatable-cont{
+              width: 100%;
+              table{
+                width: 100%;
+                overflow-x: auto;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

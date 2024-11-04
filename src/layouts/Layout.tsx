@@ -10,26 +10,9 @@ interface Props {
 
 const Layout = ({children}: Props) => {
 
-    //const [show, setShow] = useState(true);
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
-
-    /* 
-    <main className={show ? 'space-toggle' : ''}>
-
-            <Header show={show} setShow={setShow} />
-
-            <div className="main">
-                <div className="sidebar">
-                    <Sidebar show={show}/>
-                </div>
-                <div className='content'>
-                    {children}
-                </div >
-            </div>
-        </main> 
-    */
 
 
 

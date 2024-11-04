@@ -110,7 +110,7 @@ const DataTable: React.FC= () => {
                                     </button>
                                     {activeAction === user.id && (
                                         <div className='action-modal'>
-                                            <ActionModal id={user.id}/>
+                                            <ActionModal id={1}/>
                                         </div>
                                     )}
                                 </td>

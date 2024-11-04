@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps>  = ({onHamburgerClick}) => {
                     <img src={avatar} alt="avatar" className='avatar' />
                 </Link>
                 <p>Ayodeji</p>
-                <img src={dropdown} alt='dropdown-caret' className='dropdown-caret'/>
+                <img src={dropdown} alt='dropdown-caret' className='dropdown-caret' />
             </div>
 
             <div className="dropdown-container">

@@ -1,5 +1,5 @@
 .users-page{
-
+    width: 100%;
 
     h2{
         font-family: Work Sans;
@@ -388,7 +388,7 @@
     .login{
         .login-left-side{
             position: relative;
-            padding-left: 50px;
+            padding-left: 10px;
             .login-img{
                 opacity: 0.6;
             }
@@ -398,6 +398,8 @@
             top: 0;
             background: transparent;
             width: 100%;
+            padding-left: 40px;
+            height: 80%;
 
             form{
                 .form-page{
