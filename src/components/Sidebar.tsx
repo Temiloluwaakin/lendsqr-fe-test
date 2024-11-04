@@ -13,15 +13,6 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({isOpen}) => {
 
-    /**<NavLink to='/dashboard'> Users </NavLink>
-                <NavLink to='/'> Guarantors </NavLink>
-                <NavLink to='/'> Loans </NavLink>
-                <NavLink to='/'> Decision Models </NavLink>
-                <NavLink to='/'> Savings </NavLink>
-                <NavLink to='/'> Loan Request </NavLink>
-                <NavLink to='/'> Whitelist </NavLink>
-                <NavLink to='/'> Karma </NavLink> 
-    */
 
     return ( 
         <aside className={`sidebar ${isOpen ? 'open' : ''}`}>

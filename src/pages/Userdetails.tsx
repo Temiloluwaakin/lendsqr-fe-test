@@ -42,14 +42,6 @@ const Userdetails = () => {
         setActiveSection(section);
     };
 
-    
-    //const userDetail = localStorage.getItem("user");
-    //const users = userDetail ? JSON.parse(userDetail) : null;
-    /*const getUserData = (): UserDetails | null => {
-        const userData = localStorage.getItem("user"); // Ensure "userData" is the key used to store the data
-        return userData ? JSON.parse(userData) : null;
-        
-    };*/
 
     if (!UserDetail){
         return <p>no user found</p>

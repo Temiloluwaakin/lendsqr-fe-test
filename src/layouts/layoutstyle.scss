@@ -201,7 +201,7 @@
 
 
       @media (max-width: 900px) {
-        transform: translateX(-100%); // Move off-screen by default
+        transform: translateX(-100%);
         position: fixed;
         height: 100%;
         top: 0;

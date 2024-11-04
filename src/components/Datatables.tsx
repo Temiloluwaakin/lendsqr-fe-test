@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { users, User } from '../datasource';
+import { User } from '../api-clients';
 import './datatable.scss';
 import filtericon from '../components/icons/filter-results-button.png'
 import FilterModal from './FilterModal';
@@ -13,14 +13,13 @@ import Paging from './Paging'
 
 const DataTable: React.FC= () => {
 
-    const [data, setData] = useState<User[]>(users);
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [selectedColumn, setSelectedColumn] = useState<keyof User | null>(null);
     const [activeFilter, setActiveFilter]= useState<string | null>(null)
     const [activeAction, setActiveAction] = useState<number | null>(null)
     const [dataReceived, setDataReceived] = useState<User[]>([]);
     const [page, setPage] = useState<number>(1);
-    const [limit, setLimit] = useState<number| ''>(10); // 10 users per page
+    const [limit, setLimit] = useState<number| ''>(10);
     
 
     const { data: UserData, error, isLoading} = useQuery(
@@ -56,7 +55,7 @@ const DataTable: React.FC= () => {
     if (!UserData) {
         return <span> Loading...</span>
     }
-    // Handle loading and error states
+    
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>error</p>;
 
@@ -75,8 +74,7 @@ const DataTable: React.FC= () => {
                                     {header.toUpperCase()}
                                 </span>
                                 <span className={`filter-icon-container ${activeFilter === header ?  'active' : ''}`}
-                                    //className="filter-icon" 
-                                    //onClick={() => setShowlogin(!showLogin)}
+                                    
                                     onClick={() => handleFilterIconClick(header)}
                                 >
                                     <img src={filtericon} alt='filter-icon' className='filter-icon'/> 

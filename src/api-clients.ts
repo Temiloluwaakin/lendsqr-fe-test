@@ -1,8 +1,19 @@
 import axios from "axios";
-import {User} from './datasource'
 
 
-export const fetchUsers = async (page: number, limit: number| '')/*: Promise<User[]>*/ => { 
+export interface User {
+    id: number;
+    organization: string;
+    username: string;
+    email: string;
+    phoneNumber: string;
+    dateJoined: string;
+    status: 'Active' | 'Inactive' | 'Pending' | 'Blacklisted';
+}
+  
+
+
+export const fetchUsers = async (page: number, limit: number| '') => { 
     try {
         const response = await axios.get(
             `https://672551e5c39fedae05b47d71.mockapi.io/api/users?page=${page}&limit=${limit}`, {
@@ -12,11 +23,9 @@ export const fetchUsers = async (page: number, limit: number| '')/*: Promise<Use
             }
         );
 
-        /*const data = response.data
-        return data*/
         return {
             data: response.data,
-            total: (response.data).length//parseInt((response.headers).length) // MockAPI usually includes this in headers
+            total: (response.data).length
         };
     } catch (error) {
         console.error(error);
