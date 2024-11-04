@@ -125,19 +125,6 @@ const DataTable: React.FC= () => {
                 onPageChange={(page) => setPage(page)}
                 currentPage={page}
             />
-            {/*<Pagination
-                page={page}
-                limit={limit}
-                total={total}
-                onPageChange={setPage}
-                onLimitChange={setLimit}
-            />*/}
-            
-
-
-        {/* {showLogin &&
-                <FilterModal />
-            }Pagination can be added here */}
         </div>
     );
 };

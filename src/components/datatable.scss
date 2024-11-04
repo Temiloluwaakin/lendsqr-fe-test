@@ -1,6 +1,8 @@
 
 .datatable {
     width: 100%;
+    overflow-x: auto; // Allow horizontal scrolling if content exceeds width
+    box-sizing: border-box;
     
 
     .datatable-cont{
@@ -10,13 +12,18 @@
         border: 1px solid rgba(33, 63, 125, 0.06);
         background: rgba(255, 255, 255, 1);
         padding: 10px 20px;
+        overflow-x: auto;
 
 
         table {
             font-size: 12px;
             width: 100%;
-            overflow-x: auto;
+            overflow-x: scroll;
             
+            
+            th, td {
+                white-space: nowrap; // Prevent text wrapping within cells
+            }
       
             td {
                 padding: 17px;
